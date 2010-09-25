@@ -1,27 +1,18 @@
-create models
- - Author
-   -- name, string
-   -- display_name, string
-   -- bio, html
-   -- has_many works
-   -- picture, jpeg
-   -- slug, string
-   -- active, boolean
-
- - Work
-   -- title, string
-   -- as_by, string
-   -- belongs_to author
-   -- has_many chunks
-   -- translator, string
-   -- source, url
-   -- active, boolean
-
+create model
  - Chunk
    -- title, string
    -- text, text
    -- belongs_to work
    -- belongs_to author 
+
+refine models
+ - Author
+   -- has_many works
+   -- picture, jpeg
+
+ - Work
+   -- has_many chunks
+   -- source, url validation
 
 set up indexing
 
