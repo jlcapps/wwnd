@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @work.title %>
+</p>
+
+<p>
+  <b>As by:</b>
+  <%= @work.as_by %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%= @work.author_id %>
+</p>
+
+<p>
+  <b>Translator:</b>
+  <%= @work.translator %>
+</p>
+
+<p>
+  <b>Source:</b>
+  <%= @work.source %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%= @work.active %>
+</p>
+
+
+<%= link_to 'Edit', edit_work_path(@work) %> |
+<%= link_to 'Back', works_path %>

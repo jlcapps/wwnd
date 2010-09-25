@@ -1,0 +1,33 @@
+<h1>Listing works</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>As by</th>
+    <th>Author</th>
+    <th>Translator</th>
+    <th>Source</th>
+    <th>Active</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @works.each do |work| %>
+  <tr>
+    <td><%= work.title %></td>
+    <td><%= work.as_by %></td>
+    <td><%= work.author_id %></td>
+    <td><%= work.translator %></td>
+    <td><%= work.source %></td>
+    <td><%= work.active %></td>
+    <td><%= link_to 'Show', work %></td>
+    <td><%= link_to 'Edit', edit_work_path(work) %></td>
+    <td><%= link_to 'Destroy', work, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Work', new_work_path %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100923202935) do
+ActiveRecord::Schema.define(:version => 20100924171054) do
 
   create_table "authors", :force => true do |t|
     t.string   "name"
@@ -18,6 +18,17 @@ ActiveRecord::Schema.define(:version => 20100923202935) do
     t.text     "bio"
     t.string   "slug"
     t.boolean  "active",       :default => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "works", :force => true do |t|
+    t.string   "title"
+    t.string   "as_by"
+    t.integer  "author_id"
+    t.string   "translator"
+    t.string   "source"
+    t.boolean  "active",     :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

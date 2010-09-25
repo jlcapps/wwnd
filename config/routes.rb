@@ -1,4 +1,6 @@
 Wwnd::Application.routes.draw do
+  resources :works
+
   resources :authors
 
   # The priority is based upon order of creation:

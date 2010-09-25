@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  as_by: MyString
+  author: one
+  translator: MyString
+  source: MyString
+  active: false
+
+two:
+  title: MyString
+  as_by: MyString
+  author: two
+  translator: MyString
+  source: MyString
+  active: false
