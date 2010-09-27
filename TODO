@@ -3,7 +3,6 @@ refine models
    -- picture, jpeg
 
  - Work
-   -- has_many chunks
    -- source, url validation
 
 set up indexing
