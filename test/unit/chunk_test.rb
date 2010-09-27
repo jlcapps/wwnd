@@ -1,8 +1,16 @@
 require 'test_helper'
 
 class ChunkTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
+  def setup
+    @chunk = chunks(:one)
+  end
+
+  test "responds to display_title" do
+    assert_respond_to @chunk, :display_title
+  end
+
+  test "display_title is properly formatted" do
+    assert_equal "#{@chunk.work.title}/#{@chunk.title}",
+      @chunk.display_title
   end
 end
