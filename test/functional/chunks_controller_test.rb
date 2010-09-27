@@ -14,6 +14,7 @@ class ChunksControllerTest < ActionController::TestCase
   test "should get new" do
     get :new
     assert_response :success
+    assert_not_nil assigns(:works)
   end
 
   test "should create chunk" do
@@ -32,6 +33,7 @@ class ChunksControllerTest < ActionController::TestCase
   test "should get edit" do
     get :edit, :id => @chunk.to_param
     assert_response :success
+    assert_not_nil assigns(:works)
   end
 
   test "should update chunk" do

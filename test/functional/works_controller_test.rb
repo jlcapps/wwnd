@@ -14,7 +14,7 @@ class WorksControllerTest < ActionController::TestCase
   test "should get new" do
     get :new
     assert_response :success
-    assert assigns(:authors)
+    assert_not_nil assigns(:authors)
   end
 
   test "should create work" do
@@ -33,8 +33,8 @@ class WorksControllerTest < ActionController::TestCase
   test "should get edit" do
     get :edit, :id => @work.to_param
     assert_response :success
-    assert assigns(:work)
-    assert assigns(:authors)
+    assert_not_nil assigns(:work)
+    assert_not_nil assigns(:authors)
   end
 
   test "should update work" do

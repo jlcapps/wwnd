@@ -24,6 +24,7 @@ class ChunksController < ApplicationController
   # GET /chunks/new
   # GET /chunks/new.xml
   def new
+    @works = Work.all.sort_by { |w| w.select_name }
     @chunk = Chunk.new
 
     respond_to do |format|
@@ -34,6 +35,7 @@ class ChunksController < ApplicationController
 
   # GET /chunks/1/edit
   def edit
+    @works = Work.all.sort_by { |w| w.select_name }
     @chunk = Chunk.find(params[:id])
   end
 
