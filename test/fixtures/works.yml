@@ -5,6 +5,7 @@ one:
   as_by: MyString
   author: one
   translator: MyString
+  editor: MyString
   source: http://www.gutenberg.org/ebooks/19322
   active: false
 
@@ -13,5 +14,6 @@ two:
   as_by: MyString
   author: two
   translator: MyString
+  editor: MyString
   source: http://www.gutenberg.org/ebooks/18188
   active: false

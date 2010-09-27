@@ -2,9 +2,6 @@ refine models
  - Author
    -- picture, jpeg
 
- - Work
-   -- add editor field
-
 set up an import script and import some test data
 
 set up indexing
