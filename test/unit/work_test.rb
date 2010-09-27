@@ -17,4 +17,10 @@ class WorkTest < ActiveSupport::TestCase
   test "responds_to works" do
     assert_respond_to @work, :chunks
   end
+
+  test "should validate source" do
+    assert @work.valid?
+    @work.source = "alksdjflasdkjf;lkj"
+    assert !@work.valid?, "source should be valid URL"
+  end
 end
