@@ -1,0 +1,27 @@
+<h1>Listing chunks</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Body</th>
+    <th>Work</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @chunks.each do |chunk| %>
+  <tr>
+    <td><%= chunk.title %></td>
+    <td><%= chunk.body %></td>
+    <td><%= chunk.work_id %></td>
+    <td><%= link_to 'Show', chunk %></td>
+    <td><%= link_to 'Edit', edit_chunk_path(chunk) %></td>
+    <td><%= link_to 'Destroy', chunk, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Chunk', new_chunk_path %>

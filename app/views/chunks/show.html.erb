@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @chunk.title %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @chunk.body %>
+</p>
+
+<p>
+  <b>Work:</b>
+  <%= @chunk.work_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_chunk_path(@chunk) %> |
+<%= link_to 'Back', chunks_path %>

@@ -1,4 +1,6 @@
 Wwnd::Application.routes.draw do
+  resources :chunks
+
   resources :works
 
   resources :authors
