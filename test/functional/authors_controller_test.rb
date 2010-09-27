@@ -27,6 +27,8 @@ class AuthorsControllerTest < ActionController::TestCase
   test "should show author" do
     get :show, :id => @author.to_param
     assert_response :success
+    assert assigns(:author)
+    assert assigns(:works)
   end
 
   test "should get edit" do

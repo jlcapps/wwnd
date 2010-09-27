@@ -25,6 +25,7 @@
   <%= @author.active %>
 </p>
 
-
 <%= link_to 'Edit', edit_author_path(@author) %> |
 <%= link_to 'Back', authors_path %>
+
+<%= render 'works/works_list' %>

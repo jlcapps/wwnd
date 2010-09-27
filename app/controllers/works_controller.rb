@@ -24,7 +24,7 @@ class WorksController < ApplicationController
   # GET /works/new
   # GET /works/new.xml
   def new
-    @authors = Author.find(:all, :order => :name).collect { |a| a.name }
+    @authors = Author.find(:all, :order => :name)
     @work = Work.new
 
     respond_to do |format|

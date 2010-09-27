@@ -7,7 +7,6 @@ create model
 
 refine models
  - Author
-   -- has_many works
    -- picture, jpeg
 
  - Work
