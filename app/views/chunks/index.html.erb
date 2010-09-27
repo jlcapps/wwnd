@@ -13,7 +13,7 @@
 <% @chunks.each do |chunk| %>
   <tr>
     <td><%= chunk.display_title %></td>
-    <td><%= chunk.body %></td>
+    <td><%= chunk.body.slice(0, 50) %>...</td>
     <td><%= chunk.work_id %></td>
     <td><%= link_to 'Show', chunk %></td>
     <td><%= link_to 'Edit', edit_chunk_path(chunk) %></td>
