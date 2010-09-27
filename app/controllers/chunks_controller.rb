@@ -2,7 +2,7 @@ class ChunksController < ApplicationController
   # GET /chunks
   # GET /chunks.xml
   def index
-    @chunks = Chunk.all
+    @chunks = Chunk.all.sort_by { |c| c.display_title }
 
     respond_to do |format|
       format.html # index.html.erb
