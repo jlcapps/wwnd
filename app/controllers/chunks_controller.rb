@@ -2,7 +2,8 @@ class ChunksController < ApplicationController
   # GET /chunks
   # GET /chunks.xml
   def index
-    @chunks = Chunk.all.sort_by { |c| c.display_title }
+    @chunks = Chunk.all.sort_by { |c| c.display_title }.
+      paginate(params)
 
     respond_to do |format|
       format.html # index.html.erb
