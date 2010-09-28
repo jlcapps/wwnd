@@ -74,6 +74,7 @@ GEM
     treetop (1.4.8)
       polyglot (>= 0.3.1)
     tzinfo (0.3.23)
+    will_paginate (2.3.15)
 
 PLATFORMS
   ruby
@@ -82,3 +83,4 @@ DEPENDENCIES
   mysql2
   rails (= 3.0.0)
   thinking-sphinx!
+  will_paginate
