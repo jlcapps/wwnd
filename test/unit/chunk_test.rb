@@ -13,4 +13,9 @@ class ChunkTest < ActiveSupport::TestCase
     assert_equal "#{@chunk.work.title}/#{@chunk.title}",
       @chunk.display_title
   end
+
+  test "should respond to per_page" do
+    assert_respond_to @chunk, :per_page
+    assert_equal 40, @chunk.per_page
+  end
 end
