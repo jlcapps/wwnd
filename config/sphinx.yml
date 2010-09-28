@@ -1,0 +1,6 @@
+development:
+  morphology: stem_en
+test:
+  morphology: stem_en
+prduction:
+  morphology: stem_en
