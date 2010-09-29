@@ -1,4 +1,6 @@
 Wwnd::Application.routes.draw do
+  get "interrogator/index"
+
   resources :chunks
 
   resources :works
