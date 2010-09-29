@@ -22,7 +22,7 @@ class ChunkInterrogator
   end
 
   def answers
-    valid? ? Chunk.search(question) : []
+    valid? ? Chunk.search(question, :conditions => { :slug => @slug }) : []
   end
 
   def to_model
