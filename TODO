@@ -1,10 +1,6 @@
-set up search
-   
-present snippets
+set up search/present snippets
 
 refine snippets (using regex?)
-
-refine search by tokenizing the query
 
 refine search using wordnet
 
