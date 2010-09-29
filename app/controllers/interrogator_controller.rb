@@ -1,11 +1,10 @@
 class InterrogatorController < ApplicationController
   def index
-    pars = params[:chunk_interrogator]
-    if pars && pars[:question]
-      @ci = ChunkInterrogator.new(pars[:slug], pars[:question])
+    if params && params[:question]
+      @ci = ChunkInterrogator.new(params[:slug], params[:question])
       @ci.valid?
     else
-      @ci = ChunkInterrogator.new(pars[:slug], "")
+      @ci = ChunkInterrogator.new(params[:slug], "")
     end
 
     respond_to do |format|

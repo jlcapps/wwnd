@@ -1,10 +1,11 @@
-<%= form_for @ci, :url => { :controller => "interrogator", :action => "index" }, :html => { :method => "get" } do |f| %>
+<%= form_tag "", :method => "get" do %>
   <p>
-  <%= f.label :question, "Ask a Question" %>
-  <%= f.text_field :question %>
+  <%= label_tag :question, "Ask a Question" %>
+  <%= text_field_tag :question, params[:question] %>
   <% if !@ci.errors.empty? %>
     <b><%= @ci.errors[:question] %></b>
   <% end %>
+  <%= hidden_field_tag :slug, params[:slug] %>
+  <%= submit_tag "Englighten Me" %>
   </p>
-  <%= f.hidden_field :slug %>
 <% end %>
