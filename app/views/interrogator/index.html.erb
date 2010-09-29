@@ -2,10 +2,14 @@
   <p>
   <%= label_tag :question, "Ask a Question" %>
   <%= text_field_tag :question, params[:question] %>
-  <% if !@ci.errors.empty? %>
-    <b><%= @ci.errors[:question] %></b>
-  <% end %>
-  <%= hidden_field_tag :slug, params[:slug] %>
   <%= submit_tag "Englighten Me" %>
+  <%= hidden_field_tag :slug, params[:slug] %>
   </p>
+<% end %>
+<% if !@ci.errors.empty? %>
+  <b><%= @ci.errors[:question] %></b>
+<% end %>
+<p>&nbsp;</p>
+<% @ci.answers.each do |answer| %>
+  <p><%= answer.excerpts.body.html_safe %></p>
 <% end %>

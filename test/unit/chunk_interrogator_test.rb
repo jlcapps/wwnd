@@ -14,4 +14,8 @@ class ChunkInterrogatorTest < ActiveSupport::TestCase
     assert !@model.valid?
     assert_equal "That is not a question.", @model.errors[:question]
   end
+
+  test "should respond to answers" do 
+    assert_respond_to @model, :answers
+  end
 end

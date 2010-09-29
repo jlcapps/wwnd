@@ -21,6 +21,10 @@ class ChunkInterrogator
     @slug, @question = slug, question
   end
 
+  def answers
+    valid? ? Chunk.search(question) : []
+  end
+
   def to_model
     self
   end
