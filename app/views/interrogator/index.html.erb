@@ -2,7 +2,10 @@
 <%= form_for @ci, :url => { :controller => "interrogator", :action => "index" }, :html => { :method => "get" } do |f| %>
   <p>
   <%= f.label :question, "Ask a Question" %>
-  <%= f.text_field :question %> <%= f.error_messages %>
+  <%= f.text_field :question %>
+  <% if @ci.errors %>
+    <b><%= @ci.errors[:question] %></b>
+  <% end %>
   </p>
   <%= f.hidden_field :slug %>
 <% end %>
