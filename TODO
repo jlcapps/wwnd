@@ -1,7 +1,3 @@
-refine models
- - Author
-   -- picture, jpeg
-
 set up search
    
 present snippets
@@ -12,3 +8,16 @@ refine search by tokenizing the query
 
 refine search using wordnet
 
+Look for a list of questions with which to test
+
+Add more works
+
+Try to generalize import of works
+
+Add Author pictures
+
+Beautify public
+
+Deploy
+
+Add more authors/works
