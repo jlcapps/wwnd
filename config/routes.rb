@@ -1,5 +1,5 @@
 Wwnd::Application.routes.draw do
-  get "interrogator/index"
+  match '/:slug' => 'interrogator#index'
 
   resources :chunks
 

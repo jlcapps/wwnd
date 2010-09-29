@@ -1,11 +1,10 @@
-<%= form_tag "", :method => "get" do %>
+<form action="" method="get">
   <p>
   <%= label_tag :question, "Ask a Question" %>
   <%= text_field_tag :question, params[:question] %>
-  <%= submit_tag "Englighten Me" %>
-  <%= hidden_field_tag :slug, params[:slug] %>
+  <%= submit_tag "Englighten Me", :name => nil %>
   </p>
-<% end %>
+</form>
 <% if !@ci.errors.empty? %>
   <b><%= @ci.errors[:question] %></b>
 <% end %>
