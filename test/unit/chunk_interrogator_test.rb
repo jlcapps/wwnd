@@ -15,7 +15,7 @@ class ChunkInterrogatorTest < ActiveSupport::TestCase
     assert_equal "That is not a question.", @model.errors[:question]
   end
 
-  test "should respond to answers" do 
-    assert_respond_to @model, :answers
+  test "should respond to chunks" do 
+    assert_respond_to @model, :chunks
   end
 end

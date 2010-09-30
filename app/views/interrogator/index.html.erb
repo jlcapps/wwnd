@@ -8,10 +8,10 @@
 <% if !@ci.errors.empty? %>
   <b><%= @ci.errors[:question] %></b>
 <% end %>
-<% if @ci.valid? && @ci.answers.empty? %>
+<% if @ci.valid? && @ci.chunks.empty? %>
   <b>I do not know.</b>
 <% end %>
 <p>&nbsp;</p>
-<% @ci.answers.each do |answer| %>
-  <p><%= answer.html_safe %></p>
+<% @ci.chunks.each do |chunk| %>
+  <p><%= chunk.answer.html_safe %></p>
 <% end %>

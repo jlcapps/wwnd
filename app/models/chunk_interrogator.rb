@@ -21,8 +21,8 @@ class ChunkInterrogator
     @slug, @question = slug, question
   end
 
-  def answers
-    valid? ? Chunk.answer(@slug, @question).collect { |c| c.answer } : []
+  def chunks
+    valid? ? Chunk.answer(@slug, @question) : []
   end
 
   def to_model
