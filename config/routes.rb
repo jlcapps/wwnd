@@ -1,11 +1,11 @@
 Wwnd::Application.routes.draw do
-  match '/:slug' => 'interrogator#index'
-
   resources :chunks
 
   resources :works
 
   resources :authors
+
+  match '/:slug' => 'interrogator#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
