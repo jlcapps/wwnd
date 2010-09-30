@@ -8,6 +8,14 @@ class Chunk < ActiveRecord::Base
     "#{work.title}/#{title}"
   end
 
+  def self.answer(slug, question)
+    self.search(question, :conditions => { :slug => slug }, :per_page => 5)
+  end
+
+  def answer(snip=excerpts.body)
+    Answer.new(body, snip).to_s
+  end
+
   define_index do
     indexes work.author(:slug), :as => :slug
     indexes body

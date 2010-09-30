@@ -18,4 +18,12 @@ class ChunkTest < ActiveSupport::TestCase
     assert_respond_to @chunk, :per_page
     assert_equal 40, @chunk.per_page
   end
+
+  test "Chunk should respond to answer" do 
+    assert_respond_to Chunk, :answer
+  end
+
+  test "instance should respond to answer"do 
+    assert_respond_to @chunk, :answer
+  end
 end
