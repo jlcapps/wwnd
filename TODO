@@ -1,25 +1,24 @@
-limit length of questions
+Design
+ -- add Author pictures
+ -- set up index page
+ -- styles and layout
+ -- Google ads
+ -- Amazon affiliate
 
-refine search using wordnet or synonyms.txt?
 
-Look for a list of questions with which to test
 
-Add more works
+Search
+ -- limit length of questions
+ -- refine search using wordnet or synonyms.txt?
+ -- look for a list of questions with which to test
 
-Try to generalize import of works
 
-Set up authentication/authorization for appropriate pages
-
-Add Author pictures
-
-Set up index page
-
-Beautify public
+Import
+ -- add more authors/works
+ -- try to generalize import of works
 
 Deploy
 
-google ads
+Set up authentication/authorization for appropriate pages
 
-Amazon affiliate
 
-Add more authors/works
