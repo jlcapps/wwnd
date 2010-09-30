@@ -14,7 +14,7 @@
 <p>&nbsp;</p>
 <% @ci.chunks.each do |chunk| %>
   <div class="answer">
-    <div class="answer-body"><%= chunk.answer.html_safe %></div>
+    <div class="answer-body"><p><%= formatted_answer(chunk.answer.html_safe) %></p></div>
     <div class="answer-citation"><%= chunk.display_title %></div>
   </div>
 <% end %>
