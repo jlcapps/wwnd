@@ -14,10 +14,10 @@ class Answer
     if match = @body.match(snip_pattern)
       match[2]
     else
-      logger.debug "Failed Answer match!"
-      logger.debug "Body: #{@body}"
-      logger.debug "snippet: #{@snippet}"
-      logger.debug "snip_pattern: #{snip_pattern}"
+      ActiveRecord::Base.logger.debug "Failed Answer match!"
+      ActiveRecord::Base.logger.debug "Body: #{@body}"
+      ActiveRecord::Base.logger.debug "snippet: #{@snippet}"
+      ActiveRecord::Base.logger.debug "snip_pattern: #{snip_pattern}"
       @body
     end
   end
