@@ -10,7 +10,11 @@ class Answer
     snip_arr = @snippet.split("&#8230;").reject { |s| s.strip!.empty? }
     first = Regexp.escape(snip_arr.first.gsub(@@tag_pattern, ""))
     last =  Regexp.escape(snip_arr.last.gsub(@@tag_pattern, ""))
-    snip_pattern = /(.+[.?!])?(.*#{first}.*#{last}[^.?!]*[.?!]["']?)/m
+    if first == last
+      snip_pattern = /(.+[.?!])?(.*#{first}[^.?!]*[.?!]["']?)/m
+    else
+      snip_pattern = /(.+[.?!])?(.*#{first}.*#{last}[^.?!]*[.?!]["']?)/m
+    end
     if match = @body.match(snip_pattern)
       match[2]
     else

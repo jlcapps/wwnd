@@ -1,6 +1,9 @@
 development:
   morphology: stem_en
+  stopwords: 'config/stopwords.txt'
 test:
   morphology: stem_en
+  stopwords: 'config/stopwords.txt'
 prduction:
   morphology: stem_en
+  stopwords: 'config/stopwords.txt'
