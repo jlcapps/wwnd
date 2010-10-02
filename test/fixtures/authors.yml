@@ -13,3 +13,10 @@ two:
   bio: MyText
   slug: MyString
   active: true
+
+nietzsche:
+  name: Friedrich Nietzsche
+  display_name: Nietzsche
+  bio: some text
+  slug: nietzsche
+  active: true
