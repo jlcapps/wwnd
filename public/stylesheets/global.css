@@ -1,0 +1,270 @@
+
+
+/* Elements
+----------------------------------------*/
+body
+{
+  background-color:#000000;
+  
+}
+
+body, p, td, th, li
+{
+  font-family:Geneva, Arial, Helvetica, sans-serif;
+  font-size:.875em;
+  line-height:1.5em;
+  color:#000000;
+}
+
+#mainContainer
+{
+  width:100%;
+  background-color:#FFFC7D;
+}
+
+p
+{
+  margin: 0 0 1em 0;
+}
+
+/*--- Link Styles ---*/
+a:link, a:visited
+{
+  color:##BD1604;
+}
+
+
+
+h1
+{
+  color:#FFFFFF;
+  margin:0 0 0.5em 0;
+  font-size:3.125em;
+}
+
+h2
+{
+  color:#FFFFFF;
+  margin:.825em 0 .5em 0;
+  font-size:1.75em;
+}
+
+h3
+{
+  color:#FFFFFF;
+  margin:0 0 1em 0;
+  font-size:1.5em;
+}
+
+h4
+{
+  color:#FFFFFF;
+  margin:.825em 0 .5em 0;
+  font-size:1.25em;
+}
+
+h5
+{
+  color:#FFFFFF;
+  margin:0 0 1em 0;
+  font-size:1.125em;
+}
+
+h6
+{
+  color:#FFFFFF;
+  margin: 0 0 1em 0;
+  font-size:1em;
+}
+
+ul li
+{
+  list-style-type:square;
+  margin-left:25px;
+}
+
+blockquote  {margin: 0 0 18px 18px; color:#666666; font-style: italic;}
+strong    {font-weight:bold;}
+em    {font-style:italic;}
+
+form
+{
+  margin-left:12%;
+  font-size:large;
+  padding:5px 0px 0px 0px;
+}
+
+/* Standard Definitions
+----------------------------------------*/
+.left     {float:left;}
+.right    {float:right;}
+.clearThis  {clear:both;}
+.small    {font-size:.625em;}
+.large    {font-size:1em;}
+.soft   {color:#D3D3D3;}
+.hide   {display:none;}
+p.last    {margin-bottom:0px;}
+
+/* Header
+----------------------------------------*/
+#header
+{
+  width:100%;
+  height:170px;
+  background-color:#000000;
+  
+  
+}
+
+.author-name
+{
+  color:red;
+}
+
+#header h1
+{
+  text-align:center;
+  line-height:170px;
+}
+
+  /* Nav
+  ----------------------------------------*/
+  #nav
+  {
+    background-color:#FFFFFF;
+    margin-top:-21px;
+    width:100%;
+  }
+    
+  ul#nav
+  {
+    float:left;
+  }
+  
+  ul#nav li {float:left; list-style-type:none; margin-left:30%;}
+  
+  ul#nav li a:link, ul#nav li a:visited
+  {
+    color:#000000;
+    font-size:1.35em !important;
+    text-decoration:none;
+  }
+  
+  ul#nav li a:hover, ul#nav li a:active
+  {
+    text-decoration:underline;
+  }
+  
+/* Main Content
+----------------------------------------*/
+#mainContent
+{
+  width:93%;
+  margin-left:auto;
+  margin-right:auto;
+  padding:10px 25px 15px 35px;
+  background-color:#000000;
+  border-top:#FFFC7D solid 25px;
+  border-left:#FFFC7D solid 1px;
+  border-right:#FFFC7D solid 1px;
+}
+
+#mainContent p
+{
+  color:#23340C;
+}
+
+#mainContent label
+{
+  color:red;
+  font-size:large;
+}
+
+  /* Content
+  ----------------------------------------------*/
+  .content
+  {
+    width:475px;
+    float:left;
+    padding-left:25px;
+  }
+
+  .answer
+  {
+    width:70%;
+    background-color:#F2FF9C;
+    border-top:#FFFC7D solid 1px;
+    border-bottom:#FFFC7D solid 1px;
+    border-left:#FFFC7D solid 2px;
+    border-right:#FFFC7D solid 2px;
+    padding:20px 25px 15px 35px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:5px;
+  }
+  .answer-body
+  {
+    width:70%;
+    background-color:#FFFFFF;
+    border-top:#000000 solid 3px;
+    border-bottom:#000000 solid 1px;
+    border-left:#000000 solid 2px;
+    border-right:#000000 solid 1px;
+    padding:20px 25px 15px 35px;
+  }
+
+  .answer-citation
+  {
+    font-size:small;
+    padding:5px 5px 5px 5px;
+  }
+
+  .answer-citation a
+  {
+    color:#BD1604;
+    text-decoration:none;
+  }
+
+  .answer-citation a:hover
+  {
+    text-decoration:underline;
+  }
+
+  .photo
+  {
+    float:right;
+    padding:5px 5px 15px 35px;
+  }
+
+  .photo img
+  {
+    border-left:#000000 solid 2px;
+    border-top:#000000 solid 2px;
+    border-right:#000000 solid 1px;
+    border-bottom:#000000 solid 1px;
+  }
+  
+  /* Ads
+  ----------------------------------------------*/
+  .topAd
+  {
+    width:468px;
+    margin:0 auto;
+  }
+  
+  .rightAd
+  {
+    width:160px;
+    float:right;
+    margin-right:10px;
+  }
+
+/* Footer
+----------------------------------------*/
+#footer
+{
+  width:100%;
+  height:30px;
+  background-color:#000000;
+}
+

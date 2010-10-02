@@ -1,20 +1,36 @@
 <form action="" method="get">
   <p>
   <%= label_tag :question, "Ask a Question" %>
-  <%= text_field_tag :question, params[:question] %>
+  <%= text_field_tag :question, params[:question], :size => 50 %>
   <%= submit_tag "Englighten Me", :name => nil %>
   </p>
 </form>
 <% if !@ci.errors.empty? %>
-  <b><%= @ci.errors[:question] %></b>
+  <div class="answer">
+    <div class="photo"><%= image_tag @photo %></div>
+    <div class="answer-body">
+      <p><strong><%= @ci.errors[:question] %></strong></p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+    </div>
+  </div>
 <% end %>
 <% if @ci.valid? && @ci.chunks.empty? %>
-  <b>I do not know.</b>
+  <div class="answer">
+    <div class="photo"><%= image_tag @photo %></div>
+    <div class="answer-body">
+      <p><strong>I do not know.</strong></p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+    </div>
+  </div>
 <% end %>
-<p>&nbsp;</p>
 <% @ci.chunks.each do |chunk| %>
   <div class="answer">
-    <div class="answer-body"><p><%= formatted_answer(chunk.answer.html_safe) %></p></div>
-    <div class="answer-citation"><%= chunk.display_title %></div>
+    <div class="photo"><%= image_tag @photo %></div>
+    <div class="answer-body">
+      <%= formatted_answer(chunk.answer.html_safe) %>
+      <div class="answer-citation"><a href=""><%= chunk.display_title %></a></div>
+    </div>
   </div>
 <% end %>
