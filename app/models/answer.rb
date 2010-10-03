@@ -11,9 +11,9 @@ class Answer
     first = Regexp.escape(snip_arr.first.gsub(@@tag_pattern, ""))
     last =  Regexp.escape(snip_arr.last.gsub(@@tag_pattern, ""))
     if first == last
-      snip_pattern = /(.+[.?!])?(.*#{first}[^.?!]*[.?!]["']?)/m
+      snip_pattern = /(.+[.?!])?(.*#{first}[^.?!]*[.?!]?["']?)/m
     else
-      snip_pattern = /(.+[.?!])?(.*#{first}.*#{last}[^.?!]*[.?!]["']?)/m
+      snip_pattern = /(.+[.?!])?(.*#{first}.*#{last}[^.?!]*[.?!]?["']?)/m
     end
     if match = @body.match(snip_pattern)
       match[2]
