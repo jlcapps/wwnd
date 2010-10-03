@@ -9,7 +9,8 @@ class Chunk < ActiveRecord::Base
   end
 
   def self.answer(slug, question)
-    self.search(question, :conditions => { :slug => slug }, :per_page => 5)
+    self.search(question, :match_mode => :any, 
+                :conditions => { :slug => slug }, :per_page => 5)
   end
 
   def answer(snip=excerpts.body)
