@@ -51,6 +51,16 @@
                     :question => params[:question], 
                     :chunk => chunk) %>
         </li>
+        <li>
+          <a href="http://twitter.com/share" 
+             class="twitter-share-button" 
+             data-url="<%= index_url(:slug => @author.slug, 
+                                     :question=> params[:question], 
+                                     :chunk => chunk) %>" 
+                                     data-count="horizontal">Tweet</a>
+          <script type="text/javascript" 
+                  src="http://platform.twitter.com/widgets.js"></script>
+        </li>
       </ul>
     </div>
   </div>
