@@ -86,7 +86,7 @@ h6
 
 ul li
 {
-  list-style-type:square;
+  list-style-type:none;
   margin-left:25px;
 }
 
@@ -209,6 +209,13 @@ p.last    {margin-bottom:0px;}
     margin-right:auto;
     margin-bottom:5px;
   }
+
+  .answer ul li
+  {
+    float:left; 
+    font-size:x-small;
+  }
+
   .answer-body
   {
     width:70%;
@@ -217,7 +224,7 @@ p.last    {margin-bottom:0px;}
     border-bottom:#000000 solid 1px;
     border-left:#000000 solid 2px;
     border-right:#000000 solid 1px;
-    padding:20px 25px 15px 35px;
+    padding:20px 25px 25px 35px;
   }
 
   .answer-citation

@@ -36,6 +36,7 @@
     <div class="photo">
       <%= link_to image_tag(@photo), bio_url(@author.slug) %>
       <p><%= link_to @author.display_name, bio_url(@author.slug) %></p>
+      <p>&nbsp;</p>
     </div>
     <div class="answer-body">
       <%= formatted_answer(chunk.answer.html_safe) %>
@@ -43,6 +44,9 @@
         <%= link_to chunk.display_title, 
               bio_url(@author.slug, :anchor => "work-#{chunk.work.id}") %>
       </div>
+      <ul
+        <li><%= link_to "Link", index_url(:slug => @author.slug, :question => params[:question], :chunk => chunk) %></li>
+      </ul>
     </div>
   </div>
 <% end %>
