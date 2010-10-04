@@ -15,4 +15,9 @@ class InterrogatorControllerTest < ActionController::TestCase
     get :index, :slug => "nietzsche"
     assigns assigns(:photo)
   end
+
+  test "should get bio" do
+    get :bio, :slug => "nietzsche"
+    assert_response :success
+  end
 end

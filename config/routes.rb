@@ -5,7 +5,8 @@ Wwnd::Application.routes.draw do
 
   resources :authors
 
-  match '/:slug' => 'interrogator#index'
+  match '/:slug' => 'interrogator#index', :as => :index
+  match '/:slug/bio' => 'interrogator#bio', :as => :bio
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

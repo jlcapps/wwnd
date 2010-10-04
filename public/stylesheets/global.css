@@ -30,7 +30,7 @@ p
 /*--- Link Styles ---*/
 a:link, a:visited
 {
-  color:##BD1604;
+  color:#BD1604;
 }
 
 
@@ -51,7 +51,7 @@ h2
 
 h3
 {
-  color:#FFFFFF;
+  color:red;
   margin:0 0 1em 0;
   font-size:1.5em;
 }
@@ -233,7 +233,13 @@ p.last    {margin-bottom:0px;}
   .photo
   {
     float:right;
-    padding:5px 5px 15px 35px;
+    padding:0px 5px 15px 35px;
+    font-size:x-small;
+  }
+
+  .photo p
+  {
+    text-align:center;
   }
 
   .photo img

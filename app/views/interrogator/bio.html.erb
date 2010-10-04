@@ -1,0 +1,15 @@
+<div class="answer">
+  <p><%= link_to "Back", :back %></p>
+  <h3><%= @author.name %></h3>
+    <div class="photo"><%= image_tag @photo %></div>
+  <div class="answer-body">
+    <p><%= @author.bio %></p>
+  </div>
+  <p>&nbsp;</p>
+  <h3>Selected Works</h3>
+  <ul>
+  <% @author.works.each do |work| %>
+    <a name="<%= "work-#{work.id}" %>"><li><%= work.title %></li></a>
+  <% end %>
+  </ul>
+</div>
