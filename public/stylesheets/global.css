@@ -16,6 +16,13 @@ body, p, td, th, li
   color:#000000;
 }
 
+td, th
+{
+  font-family:Geneva, Arial, Helvetica, sans-serif;
+  font-size:.875em;
+  line-height:1.5em;
+  color:#FFFFFF;
+}
 #mainContainer
 {
   width:100%;
