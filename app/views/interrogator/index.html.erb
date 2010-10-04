@@ -45,7 +45,12 @@
               bio_url(@author.slug, :anchor => "work-#{chunk.work.id}") %>
       </div>
       <ul
-        <li><%= link_to "Link", index_url(:slug => @author.slug, :question => params[:question], :chunk => chunk) %></li>
+        <li>
+          <%= link_to "Link", 
+          index_url(:slug => @author.slug, 
+                    :question => params[:question], 
+                    :chunk => chunk) %>
+        </li>
       </ul>
     </div>
   </div>

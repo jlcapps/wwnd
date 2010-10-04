@@ -1,6 +1,7 @@
 class InterrogatorController < ApplicationController
   before_filter :get_author
   before_filter :get_photo
+  before_filter :get_title
 
   def index
     if params && params[:question]
@@ -37,5 +38,10 @@ protected
   def get_photo
     name = params[:slug].nil? ? "nietzsche" : params[:slug]
     @photo = "/images/#{name}.jpg"
+  end
+
+  def get_title
+    text = (params[:question] || "").titlecase
+    @title = "Ask #{@author_name}: #{text}?".squeeze("?")
   end
 end
