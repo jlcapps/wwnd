@@ -16,13 +16,13 @@ class ChunkInterrogator
 
   validates :question, :interrogative => true
 
-  attr_accessor :slug, :question
-  def initialize(slug, question)
-    @slug, @question = slug, question
+  attr_accessor :slug, :question, :chunk_id
+  def initialize(slug, question, chunk_id=nil)
+    @slug, @question, @chunk_id = slug, question, chunk_id
   end
 
   def chunks
-    valid? ? Chunk.answer(@slug, @question) : []
+    valid? ? Chunk.answer(@slug, @question, @chunk_id) : []
   end
 
   def to_model

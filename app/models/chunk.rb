@@ -8,9 +8,13 @@ class Chunk < ActiveRecord::Base
     "#{work.title}/#{title}"
   end
 
-  def self.answer(slug, question)
-    self.search(question, :match_mode => :any, 
-                :conditions => { :slug => slug }, :per_page => 5)
+  def self.answer(slug, question, chunk_id=nil)
+    query = { :match_mode => :any,
+              :conditions => { :slug => slug }, :per_page => 5 }
+    if chunk_id
+      query[:with] = { :id => chunk_id }
+    end
+    self.search(question, query)
   end
 
   def answer(snip=excerpts.body)
@@ -20,5 +24,7 @@ class Chunk < ActiveRecord::Base
   define_index do
     indexes work.author(:slug), :as => :slug
     indexes body
+
+    has id
   end
 end

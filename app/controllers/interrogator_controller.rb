@@ -4,7 +4,8 @@ class InterrogatorController < ApplicationController
 
   def index
     if params && params[:question]
-      @ci = ChunkInterrogator.new(params[:slug], params[:question])
+      @ci = ChunkInterrogator.new(params[:slug], params[:question], 
+                                  params[:chunk])
       @ci.valid?
     else
       @ci = ChunkInterrogator.new(params[:slug], "")
