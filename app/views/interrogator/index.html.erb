@@ -61,6 +61,16 @@
         <script type="text/javascript" 
                 src="http://platform.twitter.com/widgets.js"></script>
       </li>
+      <li>
+        <a name="fb_share" type="button_count" 
+           share_url="<%= index_url(:slug => @author.slug, 
+                                    :question=> params[:question], 
+                                    :chunk => chunk) %>" 
+                                   data-count="horizontal" 
+           href="http://www.facebook.com/sharer.php">Share</a>
+        <script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" 
+                type="text/javascript"></script>
+      </li>
     </ul>
   </div>
 <% end %>
