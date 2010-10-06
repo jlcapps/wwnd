@@ -11,6 +11,7 @@ class AnswerTest < ActiveSupport::TestCase
   test "should respond to to_s" do
     assert_respond_to @answer, :body
     assert_respond_to @answer, :snippet
+    assert_respond_to @answer, :snip_pattern
     assert_respond_to @answer, :to_s
     assert_equal @answer_s, @answer.to_s
   end

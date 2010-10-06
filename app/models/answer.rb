@@ -1,28 +1,29 @@
 class Answer
-  @@tag_pattern = /<\/?span.*?>/
 
-  attr_accessor :body, :snippet
+  attr_accessor :body, :snippet, :snip_pattern
   def initialize(body, snippet)
     @body, @snippet = body, snippet
+
+    tag_pattern = /<\/?span.*?>/
+    snip_arr = @snippet.split("&#8230;").reject { |s| s.strip!.empty? }
+    first = Regexp.escape(snip_arr.first.gsub(tag_pattern, ""))
+    last =  Regexp.escape(snip_arr.last.gsub(tag_pattern, ""))
+    @snip_pattern = if first == last
+      /(.+[.?!])?(.*#{first}[^.?!]*[.?!]?["']?)/m
+    else
+      /(.+[.?!])?(.*#{first}.*#{last}[^.?!]*[.?!]?["']?)/m
+    end
   end
 
   def to_s
-    snip_arr = @snippet.split("&#8230;").reject { |s| s.strip!.empty? }
-    first = Regexp.escape(snip_arr.first.gsub(@@tag_pattern, ""))
-    last =  Regexp.escape(snip_arr.last.gsub(@@tag_pattern, ""))
-    if first == last
-      snip_pattern = /(.+[.?!])?(.*#{first}[^.?!]*[.?!]?["']?)/m
-    else
-      snip_pattern = /(.+[.?!])?(.*#{first}.*#{last}[^.?!]*[.?!]?["']?)/m
-    end
-    if match = @body.match(snip_pattern)
-      match[2]
-    else
-      ActiveRecord::Base.logger.debug "Failed Answer match!"
-      ActiveRecord::Base.logger.debug "Body: #{@body}"
-      ActiveRecord::Base.logger.debug "snippet: #{@snippet}"
-      ActiveRecord::Base.logger.debug "snip_pattern: #{snip_pattern}"
-      @body
-    end
+    @quote ||= if match = @body.match(@snip_pattern)
+                 match[2]
+               else
+                 msg = ["Failed Answer match!","body: #{@body}", 
+                        "snippet: #{@snippet}", 
+                        "snip_pattern: #{@snip_pattern}"].join("\n")
+                 ActiveRecord::Base.logger.debug msg
+                 @body
+               end
   end
 end
