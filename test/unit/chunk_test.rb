@@ -23,7 +23,7 @@ class ChunkTest < ActiveSupport::TestCase
     assert_respond_to Chunk, :answer
   end
 
-  test "instance should respond to answer"do 
+  test "instance should respond to answer" do 
     assert_respond_to @chunk, :answer
   end
 end
