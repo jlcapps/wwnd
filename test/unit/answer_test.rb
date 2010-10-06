@@ -8,7 +8,7 @@ class AnswerTest < ActiveSupport::TestCase
     @answer = Answer.new(body, snippet)
   end
 
-  test "should respond to works" do
+  test "should respond to to_s" do
     assert_respond_to @answer, :body
     assert_respond_to @answer, :snippet
     assert_respond_to @answer, :to_s
