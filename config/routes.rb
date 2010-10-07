@@ -1,4 +1,10 @@
 Wwnd::Application.routes.draw do
+  get "user_session/login"
+  post "user_session/login"
+  match '/user_session' => 'user_session#login'
+
+  get "user_session/logout"
+
   resources :chunks
 
   resources :works
