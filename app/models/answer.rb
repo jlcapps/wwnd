@@ -4,6 +4,7 @@ class Answer
   def initialize(body, snippet)
     @body, @snippet = body, snippet
 
+    # build a match pattern based on Sphinx excerpts markup
     tag_pattern = /<\/?span.*?>/
     snip_arr = @snippet.split("&#8230;").reject { |s| s.strip!.empty? }
     first = Regexp.escape(snip_arr.first.gsub(tag_pattern, ""))
@@ -16,6 +17,7 @@ class Answer
   end
 
   def to_s
+    # pull quote from body of chunk
     @quote ||= if match = @body.match(@snip_pattern)
                  match[2]
                else
