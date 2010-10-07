@@ -64,7 +64,7 @@ class WorksControllerTest < ActionController::TestCase
     end
     delete :destroy, :id => @work.to_param
     assert_redirected_to user_session_login_url
-    put :update, :id => @work.to_param, :author => @work.attributes
+    put :update, :id => @work.to_param, :work => @work.attributes
     assert_redirected_to user_session_login_url
   end
 end
