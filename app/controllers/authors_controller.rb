@@ -1,4 +1,6 @@
 class AuthorsController < ApplicationController
+  before_filter :require_user
+
   # GET /authors
   # GET /authors.xml
   def index

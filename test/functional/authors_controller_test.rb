@@ -1,8 +1,12 @@
 require 'test_helper'
+require 'authlogic/test_case'
 
 class AuthorsControllerTest < ActionController::TestCase
+  setup :activate_authlogic
+
   setup do
     @author = authors(:one)
+    UserSession.create(users(:one))
   end
 
   test "should get index" do
@@ -47,5 +51,19 @@ class AuthorsControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to authors_path
+  end
+
+  test "should not get if not logged in" do
+    UserSession.find.destroy
+    get :index
+    assert_redirected_to user_session_login_url
+    [:edit, :show]. each do |m|
+      get m, :id => @author.to_param
+      assert_redirected_to user_session_login_url
+    end
+    delete :destroy, :id => @author.to_param
+    assert_redirected_to user_session_login_url
+    put :update, :id => @author.to_param, :author => @author.attributes
+    assert_redirected_to user_session_login_url
   end
 end
