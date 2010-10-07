@@ -1,8 +1,12 @@
 require 'test_helper'
+require 'authlogic/test_case'
 
 class WorksControllerTest < ActionController::TestCase
+  setup :activate_authlogic
+
   setup do
     @work = works(:one)
+    UserSession.create(users(:one))
   end
 
   test "should get index" do
@@ -48,5 +52,19 @@ class WorksControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to works_path
+  end
+
+  test "should not get if not logged in" do
+    UserSession.find.destroy
+    get :index
+    assert_redirected_to user_session_login_url
+    [:edit, :show]. each do |m|
+      get m, :id => @work.to_param
+      assert_redirected_to user_session_login_url
+    end
+    delete :destroy, :id => @work.to_param
+    assert_redirected_to user_session_login_url
+    put :update, :id => @work.to_param, :author => @work.attributes
+    assert_redirected_to user_session_login_url
   end
 end

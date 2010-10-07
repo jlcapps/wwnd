@@ -1,4 +1,6 @@
 class WorksController < ApplicationController
+  before_filter :require_user
+
   # GET /works
   # GET /works.xml
   def index
