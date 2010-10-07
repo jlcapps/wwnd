@@ -4,6 +4,10 @@ module InterrogatorHelper
     @matches = answer.scan(/([A-Z]{2,})/).flatten
     @matches += answer.scan(/_.+?_/m).flatten
     @matches.each { |m| answer.sub!(m, "<em>#{m.downcase}</em>") }
-    answer.gsub("_", "")
+    @matches = answer.scan(/\*.+?\*/).flatten
+    @matches.each { |m| answer.sub!(m, "<strong>#{m}</strong>") }
+    answer.strip!
+    answer.sub!(/^\d+\.? ?/, "")
+    answer.gsub(/[_*]/, "")
   end
 end
