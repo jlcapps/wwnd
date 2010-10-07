@@ -1,4 +1,6 @@
 class ChunksController < ApplicationController
+  before_filter :require_user
+  
   # GET /chunks
   # GET /chunks.xml
   def index
