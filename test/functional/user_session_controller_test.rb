@@ -1,6 +1,9 @@
 require 'test_helper'
+require 'authlogic/test_case'
 
 class UserSessionControllerTest < ActionController::TestCase
+  setup :activate_authlogic
+
   test "should get login" do
     get :login
     assert_response :success
@@ -14,9 +17,20 @@ class UserSessionControllerTest < ActionController::TestCase
   end
 
   test "should get logout" do
-    post :login, :user_session => { :login => "jlcapps", :password => "secret" }
+    UserSession.create(users(:one))
     get :logout
     assert_nil UserSession.find
     assert_redirected_to "/"
   end
+
+  test "should not get logout if not logged in" do
+    get :logout
+    assert_redirected_to "/"
+  end
+
+  test "should not get login if logged in" do
+    UserSession.create(users(:one))
+    get :login
+    assert_redirected_to "/authors"
+   end
 end

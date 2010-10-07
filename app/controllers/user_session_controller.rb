@@ -1,4 +1,7 @@
 class UserSessionController < ApplicationController
+  before_filter :require_no_user, :only => [:login]
+  before_filter :require_user, :only => [:logout]
+
   def login
     if request.post? 
       @user_session = UserSession.new(params[:user_session])
