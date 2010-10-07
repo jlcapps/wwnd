@@ -10,7 +10,7 @@ class Answer
     first = Regexp.escape(snip_arr.first.gsub(tag_pattern, ""))
     last =  Regexp.escape(snip_arr.last.gsub(tag_pattern, ""))
     @snip_pattern = if first == last
-      /(.+[.?!])?(.*#{first}[^.?!]*[.?!]?["']?)/m
+      /(.+[.?!]["']?)?(.*#{first}[^.?!]*[.?!]?["']?)/m
     else
       /(.+[.?!])?(.*#{first}.*#{last}[^.?!]*[.?!]?["']?)/m
     end
