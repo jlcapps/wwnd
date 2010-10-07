@@ -9,8 +9,7 @@ class Chunk < ActiveRecord::Base
   end
 
   def self.answer(slug, question, chunk_id=nil)
-    query = { :match_mode => :any,
-              :conditions => { :slug => slug }, :per_page => 5 }
+    query = { :conditions => { :slug => slug }, :per_page => 5 }
     if chunk_id
       query[:with] = { :id => chunk_id }
     end

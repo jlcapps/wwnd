@@ -43,7 +43,7 @@ class ChunkTest < ActiveSupport::TestCase
   test "query properly constructed in Chunk##answer" do 
     # Chunk#answer stubbed out to return query hash
     query = Chunk.answer("nietzsche", "what is art?")
-    assert_equal :any, query[:match_mode]
+    assert_equal nil, query[:match_mode]
     assert_equal({ :slug => "nietzsche" }, query[:conditions])
     assert_equal 5, query[:per_page]
     assert_nil query[:with]
