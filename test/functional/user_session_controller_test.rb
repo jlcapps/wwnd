@@ -25,7 +25,7 @@ class UserSessionControllerTest < ActionController::TestCase
 
   test "should not get logout if not logged in" do
     get :logout
-    assert_redirected_to "/"
+    assert_redirected_to user_session_login_url
   end
 
   test "should not get login if logged in" do

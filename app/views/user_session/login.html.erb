@@ -1,6 +1,6 @@
 <h1>Login</h1>
 
-<%= form_for @user_session do |f| %>
+<%= form_for @user_session, :url => user_session_login_path do |f| %>
   <% if !@user_session.errors.empty? %>
     <ul>
       <% @user_session.errors.full_messages.each do |error| %>
