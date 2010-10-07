@@ -264,6 +264,9 @@ p.last    {margin-bottom:0px;}
     border-right:#000000 solid 1px;
     border-bottom:#000000 solid 1px;
   }
+
+  .works-list ul li
+  { list-style-type:none; float:none; }
   
   /* Ads
   ----------------------------------------------*/

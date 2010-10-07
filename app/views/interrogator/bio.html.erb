@@ -7,9 +7,11 @@
   </div>
   <p>&nbsp;</p>
   <h3>Selected Works</h3>
-  <ul>
-  <% @author.works.each do |work| %>
-    <a name="<%= "work-#{work.id}" %>"><li><%= work.title %></li></a>
-  <% end %>
-  </ul>
+  <div class="works-list">
+    <ul>
+    <% @author.works.each do |work| %>
+      <li><a name="<%= "work-#{work.id}" %>"><%= work.title %></a></li>
+    <% end %>
+    </ul>
+  </div>
 </div>
