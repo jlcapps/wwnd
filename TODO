@@ -18,6 +18,7 @@ Search
  *- add an option to search all authors/works
  *- tweak Sphinx query/options (can we get match_mode any working? filter 
      on slug?)
+ *- Add functional tests of search (problems with w/ TS here . . . .)
 
 
 Import
