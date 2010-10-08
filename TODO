@@ -9,6 +9,7 @@ Design
  -- add navigation to admin interface
  -- add styles to admin interface
  -- deal with block quotes in Locke
+ -- answers list has gotten complicted; break into partials?
 
 
 
