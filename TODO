@@ -28,5 +28,7 @@ Import
  -- add a bootstrap script
 
 Deploy
+ -- uh, deploy
+ -- require ssl on admin resources
 
 
