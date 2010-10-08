@@ -1,5 +1,5 @@
 Design
- -- set up index page
+ *- set up index page
  -- set up about page
  -- fill out works, maybe in a partial
  -- Google ads
@@ -14,11 +14,13 @@ Design
 Search
  -- refine search using wordnet
  -- look for a list of questions with which to test
- -- add an option to search all authors/works
+ *- add an option to search all authors/works
+ *- tweak Sphinx query/options (can we get match_mode any working? filter 
+     on slug?)
 
 
 Import
- -- add more authors/works
+ *- add more authors/works
  -- try to generalize import of works
  -- add a bootstrap script
 
