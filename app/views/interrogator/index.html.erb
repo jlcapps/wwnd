@@ -34,27 +34,30 @@
 <% @ci.chunks.each do |chunk| %>
   <div class="answer">
     <div class="photo">
-      <%= link_to image_tag(@photo), bio_url(@author.slug) %>
-      <p><%= link_to @author.display_name, bio_url(@author.slug) %></p>
+      <%= link_to image_tag("/images/#{chunk.work.author.slug}.jpg"), 
+                  bio_url(chunk.work.author.slug) %>
+      <p><%= link_to chunk.work.author.display_name, 
+                     bio_url(chunk.work.author.slug) %></p>
     </div>
     <div class="answer-body">
       <%= formatted_answer(chunk.answer.html_safe) %>
       <div class="answer-citation">
         <%= link_to chunk.display_title, 
-              bio_url(@author.slug, :anchor => "work-#{chunk.work.id}") %>
+                    bio_url(chunk.work.author.slug, 
+                              :anchor => "work-#{chunk.work.id}") %>
       </div>
     </div>
     <ul>
       <li>
         <%= link_to image_tag('/images/link.png'), 
-              index_url(:slug => @author.slug, 
+              index_url(:slug => chunk.work.author.slug, 
                         :question => params[:question], 
                         :chunk => chunk) %>
       </li>
       <li>
         <a href="http://twitter.com/share" 
            class="twitter-share-button" 
-           data-url="<%= index_url(:slug => @author.slug, 
+           data-url="<%= index_url(:slug => chunk.work.author.slug, 
                                    :question=> params[:question], 
                                    :chunk => chunk) %>" 
                                    data-count="horizontal">Tweet</a>
@@ -63,7 +66,7 @@
       </li>
       <li>
         <a name="fb_share" type="button_count" 
-           share_url="<%= index_url(:slug => @author.slug, 
+           share_url="<%= index_url(:slug => chunk.work.author.slug, 
                                     :question=> params[:question], 
                                     :chunk => chunk) %>" 
                                    data-count="horizontal" 
