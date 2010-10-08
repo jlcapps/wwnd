@@ -36,7 +36,7 @@ protected
   end
 
   def get_photo
-    name = params[:slug].nil? ? "nietzsche" : params[:slug]
+    name = params[:slug].nil? ? "everybody" : params[:slug]
     @photo = "/images/#{name}.jpg"
   end
 
