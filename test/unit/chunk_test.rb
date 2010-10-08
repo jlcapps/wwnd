@@ -49,6 +49,9 @@ class ChunkTest < ActiveSupport::TestCase
     assert_nil query[:with]
     query = Chunk.answer("nietzsche", "what is art?", 1)
     assert_equal({ :id => 1 }, query[:with])
+    query = Chunk.answer("everybody", "what is art?")
+    assert_nil query[:slug]
+    assert_equal 10, query[:per_page]
   end
 
   test "instance should respond to answer" do 
