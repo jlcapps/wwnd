@@ -1,4 +1,5 @@
 Wwnd::Application.routes.draw do
+  root :to => "interrogator#root"
   get "user_session/login"
   post "user_session/login"
   match '/user_session/login' => 'user_session#login'

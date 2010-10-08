@@ -23,7 +23,27 @@ td, th
   line-height:1.5em;
   color:#FFFFFF;
 }
+
+#who-gallery
+{
+  width:350px;
+  margin-left:auto;
+  margin-right:auto;
+  padding:10px 10px 10px 10px;
+  border-bottom:#FFFC7D solid 1px;
+  border-top:#FFFC7D solid 1px;
+  border-right:#FFFC7D solid 1px;
+  border-left:#FFFC7D solid 1px;
+}
+
+#who-gallery td
+{
+  text-align:center;
+  padding:5px 5px 5px 5px;
+}
+
 #mainContainer
+
 {
   width:100%;
   background-color:#FFFC7D;
@@ -174,6 +194,7 @@ p.last    {margin-bottom:0px;}
   border-top:#FFFC7D solid 25px;
   border-left:#FFFC7D solid 1px;
   border-right:#FFFC7D solid 1px;
+  border-bottom:#FFFC7D solid 5px;
 }
 
 #mainContent p

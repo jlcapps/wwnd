@@ -23,6 +23,13 @@ class InterrogatorController < ApplicationController
     end
   end
 
+  def root
+    @authors = Author.all
+    respond_to do |format|
+      format.html
+    end
+  end
+
 protected
 
   def get_author

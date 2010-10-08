@@ -25,4 +25,10 @@ class InterrogatorControllerTest < ActionController::TestCase
     get :index, :slug => "nietzsche"
     assert assigns(:title)
   end
+
+  test "should get root" do
+    get :root
+    assert_response :success
+    assert assigns(:authors), "No @authors assigned!"
+  end
 end
