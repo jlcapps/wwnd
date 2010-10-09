@@ -3,26 +3,24 @@
     <% @authors.each_slice(3) do |trinity| %>
     <tr>
       <% trinity.each do |author| %>
-      <td>
+      <td onmouseover = "document.getElementById('author-name'
+          ).firstChild.data = '<%= author.display_name %>'; return true;",
+          onmouseout = "document.getElementById('author-name'
+          ).firstChild.data = '<%= @author_name %>'; return true;">
         <%= link_to image_tag("#{author.slug}.jpg", 
                                 :alt => author.display_name,
                                 :title => author.display_name, 
-                                :size=> "100x120",
-                                :onmouseover => "document.getElementById(
-                                  'author-name'
-                                ).firstChild.data = '#{author.display_name}';
-                                  return true;",
-                                :onmouseout => "document.getElementById(
-                                  'author-name'
-                                ).firstChild.data = '#{@author_name}'; 
-                                  return true;"),
+                                :size=> "100x120"),
                     index_url(:slug => author.slug) %>
       </td>
       <% end %>
     </tr>
     <tr>
       <% trinity.each do |author| %>
-      <td>
+      <td onmouseover = "document.getElementById('author-name'
+          ).firstChild.data = '<%= author.display_name %>'; return true;",
+          onmouseout = "document.getElementById('author-name'
+          ).firstChild.data = '<%= @author_name %>'; return true;">
         <%= link_to author.display_name, index_url(:slug => author.slug)  %>
       </td>
       <% end %>
