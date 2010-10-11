@@ -2,7 +2,7 @@ require 'test_helper'
 
 class AuthorTest < ActiveSupport::TestCase
   def setup
-    @author = authors(:one)
+    @author = authors(:nietzsche)
   end
 
   test "should respond to works" do
