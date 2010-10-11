@@ -10,7 +10,7 @@ class Chunk < ActiveRecord::Base
 
   def self.answer(slug, question, chunk_id=nil)
     if slug == "everybody"
-      query = { :match_mode => :all, :per_page => 10 }
+      query = { :match_mode => :any, :per_page => 10 }
     else
       query = { :conditions => { :slug => slug }, :per_page => 5 }
       question = question.split.join(" | ") # :conditions forces mm :extended
