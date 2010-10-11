@@ -13,6 +13,7 @@ class Chunk < ActiveRecord::Base
       query = { :match_mode => :all, :per_page => 10 }
     else
       query = { :conditions => { :slug => slug }, :per_page => 5 }
+      question = question.split.join(" | ") # :conditions forces mm :extended
     end
     if chunk_id
       query[:with] = { :id => chunk_id }
