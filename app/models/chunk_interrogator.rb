@@ -2,7 +2,8 @@ class InterrogativeValidator < ActiveModel::EachValidator
   def validate_each(record, attr, value)
     i_words = %w{ who what when where why how is isnt are should could whose
                    which whom whence whither wherefore do shouldnt arent dont
-                   couldnt does doesnt will wont did didnt whats was whos }
+                   couldnt does doesnt will wont did didnt whats was whos may
+                   can }
     words = value.downcase.sub(/[^\s\w\d]+/, '').split(' ')
     record.errors[attr] = "That is not a question." unless words.any? do |w|
       i_words.include? w
