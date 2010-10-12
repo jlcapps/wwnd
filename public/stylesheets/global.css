@@ -24,9 +24,17 @@ td, th
   color:#FFFFFF;
 }
 
+#crest
+{
+  width:30px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:-43px;
+}
+
 #who-gallery
 {
-  width:330px;
+  width:335px;
   margin-left:auto;
   margin-right:auto;
   padding:10px 10px 10px 10px;
@@ -159,7 +167,7 @@ p.last    {margin-bottom:0px;}
   #nav
   {
     background-color:#FFFFFF;
-    margin-top:-21px;
+    margin-top:-27px;
     width:100%;
   }
     
