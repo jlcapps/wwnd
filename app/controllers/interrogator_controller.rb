@@ -24,7 +24,10 @@ class InterrogatorController < ApplicationController
   end
 
   def root
-    @authors = Author.all
+    @authors = Author.all(:order => "display_name").group_by do |a| 
+      a.slug == "everybody" 
+    end.values.flatten
+
     respond_to do |format|
       format.html
     end
