@@ -10,7 +10,19 @@
   <div class="works-list">
     <ul>
     <% @author.works.each do |work| %>
-      <li><a name="<%= "work-#{work.id}" %>"><%= work.title %></a></li>
+    <li>
+      <a name="<%= "work-#{work.id}" %>"><%= work.title %></a>&nbsp;
+      <%= work.year.nil? ? "" : "(#{work.year})" %>
+        <ul>
+          <% if !work.editor.strip.empty? %>
+          <li><%= "Ed. #{work.editor}" %></li>
+          <% end %>
+          <% if !work.translator.strip.empty? %>
+          <li><%= "Trans. #{work.translator}" %></li>
+          <% end %>
+          <li><%= link_to "Project Gutenberg Ebook", work.source %></li>
+        </ul>
+    </li>
     <% end %>
     </ul>
   </div>
