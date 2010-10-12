@@ -65,4 +65,9 @@ class InterrogatorControllerTest < ActionController::TestCase
     assert_response :success
     assert assigns(:authors), "No @authors assigned!"
   end
+
+  test "should get about" do
+    get :about
+    assert_response :success
+  end
 end
