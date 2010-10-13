@@ -60,7 +60,9 @@
            data-url="<%= index_url(:slug => chunk.work.author.slug, 
                                    :question=> params[:question], 
                                    :chunk => chunk) %>" 
-                                   data-count="horizontal">Tweet</a>
+           data-text="<%= trimmed_question(chunk.work.author.display_name,
+                                           params[:question]) %>"
+           data-count="horizontal">Tweet</a>
         <script type="text/javascript" 
                 src="http://platform.twitter.com/widgets.js"></script>
       </li>
