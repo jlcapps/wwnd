@@ -66,6 +66,17 @@ class InterrogatorControllerTest < ActionController::TestCase
     assert assigns(:authors), "No @authors assigned!"
   end
 
+  test "root should assign only active authors" do
+    get :root
+    actives = Author.find_all_by_active(true)
+    actives.each do |author|
+      assert assigns(:authors).include?(author), "active author not included!"
+    end
+    assigns(:authors).each do |author|
+      assert author.active?, "inactive author included!"
+    end
+  end
+
   test "should get about" do
     get :about
     assert_response :success
