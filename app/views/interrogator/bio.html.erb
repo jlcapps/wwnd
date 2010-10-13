@@ -16,10 +16,10 @@
     <div class="work">
       <h4><a name="<%= "work-#{work.id}" %>"><%= work.title %></a>&nbsp;
         <%= work.year.nil? ? "" : "(#{work.year})" %></h4>
-        <% unless work.editor.strip.empty? %>
+        <% unless work.editor.nil? || work.editor.strip.empty? %>
         <p><%= "Ed. #{work.editor}" %></p>
         <% end %>
-        <% unless work.translator.strip.empty? %>
+        <% unless work.translator.nil? || work.translator.strip.empty? %>
         <p><%= "Trans. #{work.translator}" %></p>
         <% end %>
         <p><%= link_to "Project Gutenberg Ebook", work.source %></p>
