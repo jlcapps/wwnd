@@ -9,12 +9,13 @@
   <h3>Selected Works</h3>
   <div class="works-list">
     <% @author.works.each do |work| %>
+    <a name="<%= "work-#{work.id}" %>">
     <hr />
     <% unless work.asin.nil? || work.asin.strip.empty? %>
     <iframe src="http://rcm.amazon.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=BD1604&t=leecapsweb-20&o=1&p=8&l=as1&m=amazon&f=ifr&asins=<%= work.asin%>" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
     <% end %>
     <div class="work">
-      <h4><a name="<%= "work-#{work.id}" %>"><%= work.title %></a>&nbsp;
+      <h4><%= work.title %>&nbsp;
         <%= work.year.nil? ? "" : "(#{work.year})" %></h4>
         <% unless work.editor.nil? || work.editor.strip.empty? %>
         <p><%= "Ed. #{work.editor}" %></p>
@@ -24,6 +25,7 @@
         <% end %>
         <p><%= link_to "Project Gutenberg Ebook", work.source %></p>
     </div>
-    <% end %>
+  </a>
+  <% end %>
   </div>
 </div>
