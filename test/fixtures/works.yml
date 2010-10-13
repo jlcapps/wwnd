@@ -7,7 +7,6 @@ one:
   translator: MyString
   editor: MyString
   source: http://www.gutenberg.org/ebooks/19322
-  active: false
 
 two:
   title: MyString
@@ -16,4 +15,3 @@ two:
   translator: MyString
   editor: MyString
   source: http://www.gutenberg.org/ebooks/18188
-  active: false

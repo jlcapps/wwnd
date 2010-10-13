@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101013152324) do
+ActiveRecord::Schema.define(:version => 20101013181715) do
 
   create_table "authors", :force => true do |t|
     t.string   "name"
@@ -47,7 +47,6 @@ ActiveRecord::Schema.define(:version => 20101013152324) do
     t.integer  "author_id"
     t.string   "translator"
     t.string   "source"
-    t.boolean  "active",     :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "editor"
