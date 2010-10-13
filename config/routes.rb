@@ -13,6 +13,7 @@ Wwnd::Application.routes.draw do
   resources :authors
 
   match '/about' => 'interrogator#about', :as => :about
+  match '/privacy' => 'interrogator#privacy', :as => :privacy
   match '/:slug' => 'interrogator#index', :as => :index
   match '/:slug/bio' => 'interrogator#bio', :as => :bio
 

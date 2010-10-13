@@ -339,5 +339,7 @@ p.last    {margin-bottom:0px;}
   width:100%;
   height:30px;
   background-color:#000000;
+  font-size:x-small;
+  text-align:center;
 }
 
