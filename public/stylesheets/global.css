@@ -295,11 +295,26 @@ p.last    {margin-bottom:0px;}
   }
 
   .works-list hr
-  { width:90%;
+  { 
+    width:90%;
     margin-left:auto;
     margin-right:auto;
     color:#FFFC7D; 
     background-color:#FFFC7D; 
+  }
+
+  .works-list iframe
+  {
+    width:25%;
+    height:240px;
+    float:right;
+  }
+
+  .work
+  {
+    width:90%;
+    height:240px;
+    padding:20px 0px 0px 50px;
   }
   
   /* Ads
