@@ -93,7 +93,7 @@ h3
 
 h4
 {
-  color:#FFFFFF;
+  color:red;
   margin:.825em 0 .5em 0;
   font-size:1.25em;
 }
@@ -294,8 +294,13 @@ p.last    {margin-bottom:0px;}
     border-bottom:#000000 solid 1px;
   }
 
-  .works-list ul li
-  { list-style-type:none; float:none; }
+  .works-list hr
+  { width:90%;
+    margin-left:auto;
+    margin-right:auto;
+    color:#FFFC7D; 
+    background-color:#FFFC7D; 
+  }
   
   /* Ads
   ----------------------------------------------*/

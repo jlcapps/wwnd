@@ -8,22 +8,19 @@
   <p>&nbsp;</p>
   <h3>Selected Works</h3>
   <div class="works-list">
-    <ul>
     <% @author.works.each do |work| %>
-    <li>
-      <a name="<%= "work-#{work.id}" %>"><%= work.title %></a>&nbsp;
-      <%= work.year.nil? ? "" : "(#{work.year})" %>
-        <ul>
-          <% unless work.editor.strip.empty? %>
-          <li><%= "Ed. #{work.editor}" %></li>
-          <% end %>
-          <% unless work.translator.strip.empty? %>
-          <li><%= "Trans. #{work.translator}" %></li>
-          <% end %>
-          <li><%= link_to "Project Gutenberg Ebook", work.source %></li>
-        </ul>
-    </li>
+    <div class="work">
+      <h4><a name="<%= "work-#{work.id}" %>"><%= work.title %></a>&nbsp;
+        <%= work.year.nil? ? "" : "(#{work.year})" %></h4>
+        <% unless work.editor.strip.empty? %>
+        <p><%= "Ed. #{work.editor}" %></p>
+        <% end %>
+        <% unless work.translator.strip.empty? %>
+        <p><%= "Trans. #{work.translator}" %></p>
+        <% end %>
+        <p><%= link_to "Project Gutenberg Ebook", work.source %></p>
+        <hr />
+    </div>
     <% end %>
-    </ul>
   </div>
 </div>
