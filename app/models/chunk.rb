@@ -13,6 +13,7 @@ class Chunk < ActiveRecord::Base
     if slug == "everybody"
       query = { :match_mode => :extended, :per_page => 10 }
     else
+      # :conditions force mm :extended
       query = { :conditions => { :slug => slug }, :per_page => 5 }
     end
     if chunk_id
