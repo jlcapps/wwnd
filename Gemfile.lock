@@ -55,6 +55,7 @@ GEM
     rack (1.2.1)
     rack-mount (0.6.13)
       rack (>= 1.0.0)
+    rack-ssl-enforcer (0.1.8)
     rack-test (0.5.6)
       rack (>= 1.0)
     rails (3.0.0)
@@ -84,6 +85,7 @@ PLATFORMS
 DEPENDENCIES
   authlogic
   mysql2
+  rack-ssl-enforcer
   rails (= 3.0.0)
   thinking-sphinx!
   will_paginate

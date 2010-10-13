@@ -38,5 +38,14 @@ module Wwnd
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password, :password_confirmation]
+    config.middleware.use Rack::SslEnforcer, 
+      :only => /\/user_session\/login/ if Rails.env.production?
+    config.middleware.use Rack::SslEnforcer, 
+      :only => /\/authors\.*/ if Rails.env.production?
+    config.middleware.use Rack::SslEnforcer, 
+      :only => /\/works\.*/ if Rails.env.production?
+    config.middleware.use Rack::SslEnforcer, 
+      :only => /\/chunks\.*/ if Rails.env.production?
+
   end
 end
