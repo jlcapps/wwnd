@@ -5,6 +5,7 @@ test:
   morphology: stem_en
   stopwords: 'config/stopwords.txt'
 production:
-  searchd_file_path: '~/webapps/rails/wwnd/db/sphinx/production/'
+  pid_file: '~/webapps/rails/whowoulddowhich.com/shared/pids/searchd.pid'
+  searchd_file_path: '~/webapps/rails/whowoulddowhich.com/shared/db/sphinx'
   morphology: stem_en
   stopwords: 'config/stopwords.txt'
