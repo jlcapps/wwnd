@@ -9,6 +9,7 @@ gem 'mysql2'
 gem 'will_paginate'
 gem 'authlogic'
 gem 'rack-ssl-enforcer'
+gem 'capistrano'
 
 # Use unicorn as the web server
 # gem 'unicorn'
