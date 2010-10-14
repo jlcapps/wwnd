@@ -4,6 +4,7 @@ development:
 test:
   morphology: stem_en
   stopwords: 'config/stopwords.txt'
-prduction:
+production:
+  searchd_file_path: '~/webapps/rails/wwnd/db/sphinx/production/'
   morphology: stem_en
   stopwords: 'config/stopwords.txt'
