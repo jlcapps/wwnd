@@ -19,6 +19,7 @@ set :branch, 'master'
 set :scm_verbose, true
 set :use_sudo, false
 set :git_shallow_clone, 1
+default_environment['GEM_PATH']="/home/#{user}/webapps/rails/gems:/usr/lib/ruby/gems/1.8"
 
 after 'deploy:symlink', 'deploy:finishing_touches'
 
