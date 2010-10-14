@@ -30,6 +30,6 @@ class Chunk < ActiveRecord::Base
     indexes work.author(:slug), :as => :slug
     indexes body
 
-    has id
+    has chunks(:id)
   end
 end
