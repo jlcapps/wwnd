@@ -4,7 +4,7 @@ set :user, Proc.new { Capistrano::CLI.ui.ask("Enter user name: ") }
 set :domain, 'whowoulddowhich.com'
 set :application, 'wwnd'
 
-set :repository,  "github.com/jlcapps/#{application}.git" 
+set :repository,  "git://github.com/jlcapps/#{application}.git" 
 set :deploy_to, "/home/#{user}/webapps/rails/#{domain}" 
 set :current_config_path, "#{current_path}/config"
 set :copy_path, "#{deploy_to}/to_copy"
