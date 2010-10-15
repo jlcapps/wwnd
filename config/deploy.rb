@@ -8,6 +8,7 @@ set :repository,  "git://github.com/jlcapps/#{application}.git"
 set :deploy_to, "/home/#{user}/webapps/rails/#{domain}" 
 set :current_config_path, "#{current_path}/config"
 set :copy_path, "#{deploy_to}/to_copy"
+set :init_path, "#{current_config_path}/initializers"
 
 role :app, domain
 role :web, domain
@@ -33,6 +34,7 @@ namespace :deploy do
   end
   task :finishing_touches, :roles => :app do
     run "cp -pf #{copy_path}/database.yml #{current_config_path}/database.yml"
+    run "cp -pf #{copy_path}/ppds_doodle_ad_stub.rb #{init_path}/"
   end
 end
 
