@@ -24,10 +24,7 @@ class InterrogatorController < ApplicationController
   end
 
   def root
-    @authors = Author.where(:active => true).order("display_name").
-      group_by do |a| 
-        a.slug == "everybody" 
-      end.values.flatten
+    @authors = Author.active_and_in_order
 
     respond_to do |format|
       format.html
@@ -35,10 +32,7 @@ class InterrogatorController < ApplicationController
   end
 
   def about
-    @authors = Author.where(:active => true).order("display_name").
-      group_by do |a| 
-        a.slug == "everybody" 
-      end.values.flatten
+    @authors = Author.active_and_in_order
 
     respond_to do |format|
       format.html
