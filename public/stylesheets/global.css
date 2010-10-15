@@ -53,8 +53,9 @@ td, th
 #mainContainer
 
 {
-  width:100%;
+  width:950px;
   background-color:#FFFC7D;
+  margin:auto;
 }
 
 p
@@ -124,7 +125,8 @@ em    {font-style:italic;}
 
 form
 {
-  margin-left:11%;
+  width:775px;
+  margin-left:75px;
   font-size:large;
   padding:5px 0px 0px 0px;
 }
@@ -169,6 +171,8 @@ p.last    {margin-bottom:0px;}
     background-color:#FFFFFF;
     margin-top:-27px;
     width:100%;
+    margin-left:auto;
+    margin-right:auto;
   }
     
   ul#nav
@@ -227,7 +231,7 @@ p.last    {margin-bottom:0px;}
 
   .answer
   {
-    width:70%;
+    width:665px;
     background-color:#F2FF9C;
     border-top:#FFFC7D solid 1px;
     border-bottom:#FFFC7D solid 1px;
