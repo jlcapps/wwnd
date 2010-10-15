@@ -231,7 +231,7 @@ p.last    {margin-bottom:0px;}
 
   .answer
   {
-    width:665px;
+    width:615px;
     background-color:#F2FF9C;
     border-top:#FFFC7D solid 1px;
     border-bottom:#FFFC7D solid 1px;
@@ -239,7 +239,7 @@ p.last    {margin-bottom:0px;}
     border-right:#FFFC7D solid 2px;
     padding:20px 25px 35px 35px;
     margin-left:auto;
-    margin-right:auto;
+    margin-right:130px;
     margin-bottom:15px;
   }
 
@@ -331,9 +331,9 @@ p.last    {margin-bottom:0px;}
   
   .rightAd
   {
-    width:160px;
+    width:120px;
     float:right;
-    margin-right:10px;
+    /*margin-right:10px;*/
   }
 
 /* Footer

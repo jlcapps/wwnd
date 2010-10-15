@@ -6,6 +6,9 @@
   </p>
 </form>
 <% unless @ci.errors.empty? %>
+  <div class="rightAd">
+    <%= google_ad(125, 125).html_safe %>
+  </div>
   <div class="answer">
     <div class="photo">
       <%= link_to image_tag(@photo), bio_url(@author.slug) %>
@@ -30,6 +33,11 @@
       <p>&nbsp;</p>
     </div>
   </div>
+<% end %>
+<% unless @ci.chunks.empty? %>
+<div class="rightAd">
+  <%= google_ad(120, 600).html_safe %>
+</div>
 <% end %>
 <% @ci.chunks.each do |chunk| %>
   <div class="answer">
