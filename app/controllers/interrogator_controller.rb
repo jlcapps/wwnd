@@ -34,6 +34,16 @@ class InterrogatorController < ApplicationController
     end
   end
 
+  def about
+    @authors = Author.where(:active => true).order("display_name").
+      group_by do |a| 
+        a.slug == "everybody" 
+      end.values.flatten
+
+    respond_to do |format|
+      format.html
+    end
+  end
 protected
 
   def get_author

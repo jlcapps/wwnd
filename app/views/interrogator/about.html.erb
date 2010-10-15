@@ -16,13 +16,43 @@
 the individual philosophers by clicking their portraits on the home page, or
 quiz them all by choosing Hive Mind.</p> 
     
-    <p>All texts are derived from public domain editions made available
-    by <a href="http://www.gutenberg.org">Project Gutenberg</a>. I'm adding new
-    works and new philosophers all the time.</p>
-
     <p>If you have questions, suggestions, WWDW-related concerns, filthy
     lucre I'd love to hear from you. Please contact me through my personal Web
     site:  <a href="http://www.leecapps.com">www.leecapps.com</a>. Or Twitter
     is good: <a href="http://twitter.com/jlcapps">@jlcapps</a> </p> 
+
+    <p>All texts are derived from public domain editions made available
+    by <a href="http://www.gutenberg.org">Project Gutenberg</a>. I'm adding new
+    works and new philosophers all the time. Here's what I've got so far:</p>
+<div id="who-gallery">
+  <table>
+    <% @authors.each_slice(3) do |trinity| %>
+    <tr>
+      <% trinity.each do |author| %>
+      <td onmouseover = "document.getElementById('author-name'
+          ).firstChild.data = '<%= author.display_name %>'; return true;",
+          onmouseout = "document.getElementById('author-name'
+          ).firstChild.data = '<%= @author_name %>'; return true;">
+        <%= link_to image_tag("#{author.slug}.jpg", 
+                                :alt => author.display_name,
+                                :title => author.display_name, 
+                                :size=> "100x120"),
+                    bio_url(:slug => author.slug) %>
+      </td>
+      <% end %>
+    </tr>
+    <tr>
+      <% trinity.each do |author| %>
+      <td onmouseover = "document.getElementById('author-name'
+          ).firstChild.data = '<%= author.display_name %>'; return true;",
+          onmouseout = "document.getElementById('author-name'
+          ).firstChild.data = '<%= @author_name %>'; return true;">
+        <%= link_to author.display_name, bio_url(:slug => author.slug)  %>
+      </td>
+      <% end %>
+    </tr>
+    <% end %>
+  </table>
+</div>
   </div>
 </div>
