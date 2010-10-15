@@ -1,5 +1,4 @@
 Design
- -- Google ads
  -- add navigation to admin interface
  -- add styles to admin interface
  -- deal with block quotes in Locke
@@ -13,6 +12,3 @@ Import
  -- add more authors/works
  -- try to generalize import of works
  -- add a bootstrap script
-
-Deploy
- -- uh, deploy
