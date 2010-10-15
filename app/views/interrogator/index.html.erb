@@ -36,7 +36,11 @@
 <% end %>
 <% unless @ci.chunks.empty? %>
 <div class="rightAd">
+  <% if @ci.chunks.count > 2 %>
   <%= google_ad(120, 600).html_safe %>
+  <% else %>
+  <%= google_ad(120, 240).html_safe %>
+  <% end %>
 </div>
 <% end %>
 <% @ci.chunks.each do |chunk| %>
