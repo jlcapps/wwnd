@@ -5,7 +5,7 @@
   <%= submit_tag "Englighten Me", :name => nil %>
   </p>
 </form>
-<% if !@ci.errors.empty? %>
+<% unless @ci.errors.empty? %>
   <div class="answer">
     <div class="photo">
       <%= link_to image_tag(@photo), bio_url(@author.slug) %>
