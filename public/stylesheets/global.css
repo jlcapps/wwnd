@@ -4,7 +4,7 @@
 ----------------------------------------*/
 body
 {
-  background-color:#000000;
+  background-color:#0E0E09;
   
 }
 
@@ -54,7 +54,7 @@ td, th
 
 {
   width:950px;
-  background-color:#FFFC7D;
+  background-color:#0E0E09;
   margin:auto;
 }
 
@@ -148,7 +148,7 @@ p.last    {margin-bottom:0px;}
 {
   width:100%;
   height:170px;
-  background-color:#000000;
+  background-color:#0E0E09;
   
   
 }
@@ -202,10 +202,10 @@ p.last    {margin-bottom:0px;}
   margin-left:auto;
   margin-right:auto;
   padding:10px 25px 15px 35px;
-  background-color:#000000;
+  background-color:#0E0E09;
   border-top:#FFFC7D solid 25px;
-  border-left:#FFFC7D solid 1px;
-  border-right:#FFFC7D solid 1px;
+  border-left:#FFFC7D solid 3px;
+  border-right:#FFFC7D solid 4px;
   border-bottom:#FFFC7D solid 5px;
 }
 
@@ -342,7 +342,7 @@ p.last    {margin-bottom:0px;}
 {
   width:100%;
   height:30px;
-  background-color:#000000;
+  background-color:#0E0E09;
   font-size:x-small;
   text-align:center;
 }
