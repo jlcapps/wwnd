@@ -42,7 +42,7 @@ module Ppds # :nodoc:
     TYPES = ["text", "image", "text_image"]
     
     def in_production?
-      (RAILS_ENV == 'production' and not DoodleAdStub.client_id.blank?)
+      (Rails.env.production? and not DoodleAdStub.client_id.blank?)
     end
 
     def sanitize_type(ad_type)
@@ -63,7 +63,7 @@ module Ppds # :nodoc:
     def stub_image
       image = "#{@ad_width}x#{@ad_height}_#{@ad_type}.png"
       image_url = "/images/doodle_ad_stub/#{image}"
-      image_path = File.join(RAILS_ROOT, "public", image_url)
+      image_path = File.join(Rails.root.to_s, "public", image_url)
       return "Stub image #{image} not found!" unless File.exists?(image_path)
       "<img src=\"#{image_url}\" alt=\"#{image}\" />"
     end
