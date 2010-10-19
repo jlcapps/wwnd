@@ -19,7 +19,7 @@ class ChunkInterrogator
 
   attr_accessor :slug, :question, :chunk_id
   def initialize(slug, question, chunk_id=nil)
-    @slug, @question, @chunk_id = slug, question, chunk_id
+    @slug, @question, @chunk_id = slug, question.sub("'", ""), chunk_id
   end
 
   def chunks
