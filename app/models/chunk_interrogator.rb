@@ -15,7 +15,7 @@ class ChunkInterrogator
   extend ActiveModel::Naming
   include ActiveModel::Validations
 
-  validates :question, :interrogative => true
+  validates_presence_of :question, :message => "What is your question?"
 
   attr_accessor :slug, :question, :chunk_id
   def initialize(slug, question, chunk_id=nil)
@@ -35,12 +35,4 @@ class ChunkInterrogator
   def persisted?()  false end
   def to_key()      nil   end
   def to_param()    nil   end
-
-  def errors
-    @errors ||= Hash.new([])
-    def @errors.full_messages() 
-      self.nil? ? [] : self.values
-    end
-    @errors
-  end
 end
