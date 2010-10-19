@@ -1,7 +1,7 @@
 <form action="" method="get">
   <p>
-  <%= label_tag :question, "Ask a Question" %>
-  <%= text_field_tag :question, params[:question], :size => 50 %>
+  <%= label_tag :question, "What would #{@author_name} do if..." %><br />
+  <%= text_field_tag :question, params[:question], :size => 59 %>
   <%= submit_tag "Englighten Me", :name => nil %>
   </p>
 </form>
