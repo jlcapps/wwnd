@@ -5,10 +5,9 @@ class Answer
     @body, @snippet = body, snippet
 
     # build a match pattern based on Sphinx excerpts markup
-    tag_pattern = /<\/?span.*?>/
     snip_arr = @snippet.split("&#8230;").reject { |s| s.strip!.empty? }
-    first = Regexp.escape(snip_arr.first.gsub(tag_pattern, ""))
-    last =  Regexp.escape(snip_arr.last.gsub(tag_pattern, ""))
+    first = Regexp.escape(snip_arr.first)
+    last =  Regexp.escape(snip_arr.last)
     @snip_pattern = if first == last
       /(.+[.?!]\)?["']?\s+)?(['"]?[A-Z]?.*#{first}[^.?!]*[.?!]?["']?)/m
     else

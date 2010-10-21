@@ -19,6 +19,7 @@ class Chunk < ActiveRecord::Base
     if chunk_id
       query[:with] = { :id => chunk_id }
     end
+    query[:excerpt_options] = { :before_match => "", :after_match => "" }
     self.search(question, query)
   end
 
