@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/freelancing-god/thinking-sphinx.git
-  revision: 462c98a3959ac8c0f9dec81c1d14bd9951fdd87d
+  revision: 8ce28d9ad4c892ec2193917be88188c32f0ba040
   branch: rails3
   specs:
     thinking-sphinx (2.0.0.rc2)
