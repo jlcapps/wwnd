@@ -12,11 +12,11 @@ module InterrogatorHelper
   end
 
   def trimmed_question(name, question)
-    max_length = 106 - name.length
+    max_length = 98 - name.length
     if question.length > max_length
-      "Ask #{name}: #{question.slice(0, max_length - 1)}...?"
+      "Ask #{name}: What if #{question.slice(0, max_length - 1)}...?"
     else
-      "Ask #{name}: #{question}"
+      "Ask #{name}: What if #{question}"
     end
   end
 end
