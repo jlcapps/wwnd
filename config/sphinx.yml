@@ -1,9 +1,11 @@
 development:
   morphology: stem_en
   stopwords: 'config/stopwords.txt'
+  bin_path: '/usr/local/bin'
 test:
   morphology: stem_en
   stopwords: 'config/stopwords.txt'
+  bin_path: '/usr/local/bin'
 production:
   bin_path: '/home/jlcapps/bin'
   pid_file: '/home/jlcapps/webapps/rails/whowoulddowhich.com/shared/pids/searchd.pid'
